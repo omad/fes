@@ -5,7 +5,7 @@ pipelines:
     - step:
         script:
           - apt-get update -q -y
-          - apt-get install autoconf libtool libnetcdf-dev uthash-dev -q -y
+          - apt-get install autoconf libtool libnetcdf-dev uthash-dev libbsd-dev -q -y
           - mkdir -p m4
           - autoreconf -i
           - ./configure
