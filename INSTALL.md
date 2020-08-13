@@ -14,6 +14,18 @@
   array-oriented scientific data.
   (http://www.unidata.ucar.edu/software/netcdf/)
 
+## Installation on the NCI for use with the `dea` module
+
+~~~
+module load dea
+git clone --recursive https://github.com/omad/fes/
+cd fes
+mkdir build && cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=/opt/local -DBUILD_PYTHON=True
+make -j 8
+mkdir -p $PYTHONUSERBASE
+cp python/*.so $PYTHONUSERBASE
+~~~
 
 ## Install with conda
 
